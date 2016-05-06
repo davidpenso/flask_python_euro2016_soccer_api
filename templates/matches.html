@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Matches</title>
+	</head>
+
+	<body>
+		<h1>Matches that will be played</h1>
+
+		<ul>
+			{% for match in m %}
+			  <li>{{ match.home|e}} vs {{ match.away|e}}</li>
+			{% endfor %}
+		</ul>
+	</body>
+
+</html>
