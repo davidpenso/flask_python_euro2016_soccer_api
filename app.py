@@ -8,21 +8,6 @@ headers = {
                  'x-crowdscores-api-key': api_key,
                  'Content-Type': 'application/json'
                 }
-#endpoint='teams?competition_id=267'
-#endpoint='competitions'
-#endpoint='teams/397'
-#endpoint='matches?competition_id=267'
-#endpoint='league-tables?competition_id=267'
-#r = requests.get(base + endpoint, headers=headers)
-
-#print(r.status_code)
-#d=r.json()
-#for i in d:
-	#print(i['name'], i['dbid'])
-#	print('\n \n')
-#	print(i)
-	#print(i['homeTeam']['name'], i['awayTeam']['name'])
-	#print(i['round']['name'])
 
 class Teams():
 	def __init__(self, compid):
@@ -84,9 +69,6 @@ class Tournament(Teams, Matches):
 
 
 europa=Tournament('267')
-#print(europa.home)
-#print(europa.away)
-#print(europa.teams)
 
 l=[]
 for team, flag in zip(europa.teams,europa.flag):
